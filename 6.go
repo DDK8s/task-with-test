@@ -17,13 +17,13 @@ func main() {
 	Act(numbers)
 }
 
-func Act(numbers [6]int) [6]int{
-	x := 5
+func Act(numbers [6]int) int{
+	k := 2
 	sinList := initiationList()
 	numbers = sinList.fillArray(numbers)
 
-	/* Ручное заполнение.
-	sinList.addInEnd(8)
+	// Ручное заполнение.
+	/* sinList.addInEnd(8)
 	sinList.addInEnd(9)
 	sinList.addInEnd(7)
 	sinList.addInEnd(1)
@@ -31,22 +31,16 @@ func Act(numbers [6]int) [6]int{
 	sinList.addInEnd(3)
 	*/
 
-	current := sinList.head
-	var number [6]int
+	p1 := sinList.head
+	p2 := sinList.head
 
-	for i := 0; current != nil; i++ {
-		if current.data < x {
-			s := current.data
-			sinList.removeElement(i)
-			sinList.addInFront(s)
-		}
-		current = current.next
+	for i := 0; i < k - 1; i++ {
+		p2 = p2.next
 	}
 
-	current = sinList.head
-	for i := 0; current != nil; i++ {
-		number[i] = current.data
-		current = current.next
+	for p2.next != nil {
+		p1 = p1.next
+		p2 = p2.next
 	}
 
 	// Вывести весь список.
@@ -55,7 +49,7 @@ func Act(numbers [6]int) [6]int{
 		fmt.Println(err.Error())
 	}*/
 
-	return number
+	return p1.data
 }
 
 func initiationList() *sinList {
