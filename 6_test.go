@@ -21,4 +21,3 @@ func TestAct(t *testing.T) {
 	fmt.Println("Correct result")
 }
 
-
