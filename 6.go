@@ -39,7 +39,6 @@ func Act(numbers [6]int) [6]int{
 			s := current.data
 			sinList.removeElement(i)
 			sinList.addInFront(s)
-
 		}
 		current = current.next
 	}
