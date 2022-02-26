@@ -17,7 +17,7 @@ func main() {
 	Act(numbers)
 }
 
-func Act(numbers [6]int) [6]int{
+func Act(numbers [6]int) [6]int {
 	x := 5
 	sinList := initiationList()
 	numbers = sinList.fillArray(numbers)
@@ -62,7 +62,7 @@ func initiationList() *sinList {
 	return &sinList{}
 }
 
-func (s *sinList) fillArray(numbers [6]int) [6]int{
+func (s *sinList) fillArray(numbers [6]int) [6]int {
 
 	for _, v := range numbers {
 		s.addInEnd(v)
@@ -70,7 +70,7 @@ func (s *sinList) fillArray(numbers [6]int) [6]int{
 	return numbers
 }
 
-func (s *sinList) addInEnd (data int) {
+func (s *sinList) addInEnd(data int) {
 	element := &element{
 		data: data,
 	}
@@ -86,7 +86,7 @@ func (s *sinList) addInEnd (data int) {
 	s.len++
 }
 
-func (s *sinList) addInFront (data int) {
+func (s *sinList) addInFront(data int) {
 	element := &element{
 		data: data,
 	}
